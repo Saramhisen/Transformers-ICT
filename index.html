@@ -162,24 +162,27 @@
       <p>In this website, you will find an explanation of transformers using images, videos, and quizzes. At the end, you'll earn a certificate for mastering the topic!</p>
       <p>A transformer is a device that transfers electric energy from one alternating-current circuit to another, either increasing or decreasing the voltage.</p>
 
-  <button id="audioButton" onclick="playAudio()">🔊 Play Audio</button>
+ <button id="audioButton" onclick="toggleAudio()">🔊 Play Audio</button>
 <audio id="introAudio">
   <source src="transformer.mp3" type="audio/mpeg" />
   Your browser does not support the audio element.
 </audio>
 
 <script>
-  function playAudio() {
+  function toggleAudio() {
     const audio = document.getElementById('introAudio');
+    const button = document.getElementById('audioButton');
+    
     if (audio.paused) {
       audio.play();
-      document.getElementById('audioButton').textContent = '🔇 Pause Audio';
+      button.textContent = '🔇 Pause Audio';
     } else {
       audio.pause();
-      document.getElementById('audioButton').textContent = '🔊 Play Audio';
+      button.textContent = '🔊 Play Audio';
     }
   }
 </script>
+
 
 
 <div style="text-align: center; margin-top: 30px;">
